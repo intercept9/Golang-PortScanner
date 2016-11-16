@@ -1,6 +1,15 @@
 # Golang-PortScanner
 Portscanner for Script Kiddies :)
 
-A lot of improvements have to be done, Things have just started
+A lot of improvements have to be done 
 
-With <3 on Go
+Things have just started
+
+With love on Go
+
+
+# Way to use :
+
+* Install Go
+* go build portscan portscan.go 
+* ./portscan {IP}
