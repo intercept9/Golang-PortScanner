@@ -32,7 +32,7 @@ func callme(){
   getip := os.Args[1]
   getport := 0
        
-for i := 20; i < 80; i++ {
+for i := 20; i < 65536; i++ {
   getport = i
   data := getip+":"+strconv.Itoa(getport)
   conn, err := net.Dial("tcp", data)
