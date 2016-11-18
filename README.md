@@ -13,3 +13,8 @@ With love on Go
 * Install Go
 * go build portscan portscan.go 
 * ./portscan {IP}
+
+
+
+
+Hey my first github commit
