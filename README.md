@@ -16,13 +16,3 @@ With love on Go
 
 
 
-
-Hey my first github commit
-
-Awesome this work!
-
-
-yaaayyyy
-
-
-it should not ask me now !
