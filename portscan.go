@@ -63,6 +63,7 @@ func callme() {
 			conn.Close()
 
 			fmt.Println(status)
+			fmt.Printf("ok")
 
 		}
 
