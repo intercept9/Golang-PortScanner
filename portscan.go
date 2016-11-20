@@ -15,12 +15,16 @@
 package main
 
 import (
-	//"log"
 	"fmt"
 	"net"
 	"os"
 	"strconv"
 )
+
+type corelements struct {
+	ip     string
+	status string
+}
 
 func main() {
 
@@ -29,7 +33,7 @@ func main() {
 		usage() //he fucked with arguments tell him how to do it
 	} else {
 
-		callme()
+		core()
 	}
 }
 
@@ -45,28 +49,27 @@ func usage() {
 	`)
 }
 
-func callme() {
+func core() {
 
-	var status string
-	getip := os.Args[1]
+	var core corelements
+	core.ip = os.Args[1]
 	getport := 0
 	for i := 20; i < 65536; i++ {
 		getport = i
-		data := getip + ":" + strconv.Itoa(getport)
+		data := core.ip + ":" + strconv.Itoa(getport)
 		conn, err := net.Dial("tcp", data)
 		if err != nil {
 			//log.Println("Connection error:", err)     //When want a specific reason why it dint connect
-			status = strconv.Itoa(getport) + " - " + "Closed"
+			core.status = strconv.Itoa(getport) + " - " + "Closed"
 		} else {
 
-			status = strconv.Itoa(getport) + " - " + "Open"
+			core.status = strconv.Itoa(getport) + " - " + "Open"
 			conn.Close()
 
-			fmt.Println(status)
-			fmt.Printf("ok")
+			fmt.Println(core.status)
 
 		}
-
+		//log.Println("erorr", err)
 	}
 
 }
